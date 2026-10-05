@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111815">
+    <meta name="description" content="Build creative projects, shape a cast, and plan scenes in Animaitor Studio Beta.">
+    <title>Studio Beta — Animaitor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="studio.css">
+    <script src="studio.js" defer></script>
+</head>
+<body>
+    <div class="studio-shell">
+        <aside class="sidebar" id="sidebar" aria-label="Project navigation">
+            <a class="brand" href="index.html" aria-label="Animaitor home">
+                <img src="assets/animaitor logo full.png" alt="Animaitor">
+                <span class="beta-tag">BETA</span>
+            </a>
+            <div class="sidebar-section-label">WORKSPACES</div>
+            <div class="project-list" id="projectList" aria-label="Projects"></div>
+            <button class="text-button add-project" id="newProjectButton" type="button"><span aria-hidden="true">+</span> New project</button>
+            <div class="sidebar-bottom">
+                <div class="local-indicator"><span></span> LOCAL WORKSPACE</div>
+                <a href="index.html">Back to Animaitor.xyz <span aria-hidden="true">↗</span></a>
+            </div>
+        </aside>
+        <button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="Close project navigation" tabindex="-1"></button>
+
+        <div class="main-column">
+            <header class="topbar">
+                <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Open project navigation" aria-expanded="false"><span></span><span></span></button>
+                <div class="breadcrumbs"><span>STUDIO</span><b>/</b><strong id="breadcrumbProject">Jingle Jungle</strong></div>
+                <div class="top-actions">
+                    <span class="save-state" id="saveState" role="status">Saved in this browser</span>
+                    <button class="icon-button" id="exportButton" type="button" aria-label="Export project backup" title="Export project backup">↓</button>
+                    <button class="icon-button" id="importButton" type="button" aria-label="Import project backup" title="Import project backup">↑</button>
+                    <input id="importFile" type="file" accept="application/json,.json" hidden>
+                </div>
+            </header>
+
+            <main class="workspace">
+                <section class="workspace-heading">
+                    <div>
+                        <div class="eyebrow"><span>CREATIVE WORKSPACE</span><i>01</i></div>
+                        <h1 id="projectHeading">Jingle Jungle</h1>
+                        <p id="projectSubheading">Preschool animated series <span aria-hidden="true">·</span> Project bible</p>
+                    </div>
+                    <button class="button button-primary" id="newSceneButton" type="button"><span aria-hidden="true">+</span> Draft a scene</button>
+                </section>
+
+                <nav class="view-tabs" aria-label="Project views" role="tablist">
+                    <button class="view-tab active" type="button" role="tab" aria-selected="true" data-view="overview">Overview</button>
+                    <button class="view-tab" type="button" role="tab" aria-selected="false" data-view="characters">Cast <span id="castCount">0</span></button>
+                    <button class="view-tab" type="button" role="tab" aria-selected="false" data-view="scenes">Scene board <span id="sceneCount">0</span></button>
+                </nav>
+
+                <section class="view-page" id="overviewPage" data-page="overview">
+                    <div class="overview-grid">
+                        <section class="glass-panel project-editor">
+                            <div class="panel-heading"><div><div class="micro-label">PROJECT BIBLE</div><h2>Set the direction</h2></div><span class="panel-index">01—04</span></div>
+                            <form id="projectForm" class="form-stack">
+                                <label>Project name<input id="projectName" name="name" maxlength="60" required></label>
+                                <div class="form-row">
+                                    <label>Format<input id="projectFormat" name="format" maxlength="48" placeholder="Animated series"></label>
+                                    <label>Audience<input id="projectAudience" name="audience" maxlength="48" placeholder="Family / preschool"></label>
+                                </div>
+                                <label>Premise<textarea id="projectPremise" name="premise" rows="3" maxlength="420" placeholder="What is this project about?"></textarea></label>
+                                <label>Visual direction<textarea id="projectStyle" name="style" rows="2" maxlength="280" placeholder="Materials, color, lighting, and tone"></textarea></label>
+                                <div class="form-footer"><span>LOCAL / BROWSER STORAGE</span><button class="button button-dark" type="submit">Save direction</button></div>
+                            </form>
+                        </section>
+
+                        <section class="sample-panel">
+                            <div class="sample-art"><img src="assets/demo/momo.png" alt="Momo, the Jingle Jungle monkey character"></div>
+                            <div class="sample-caption"><span class="micro-label">FEATURED CHARACTER</span><strong>Momo</strong><span>Curious / always in motion</span></div>
+                            <button class="sample-arrow" type="button" data-open-view="characters" aria-label="Open cast">↗</button>
+                        </section>
+
+                        <section class="overview-stats">
+                            <div class="stat-line"><span>CAST MEMBERS</span><strong id="overviewCastCount">0</strong><button type="button" data-open-view="characters" aria-label="Open cast">↗</button></div>
+                            <div class="stat-line"><span>SCENE DRAFTS</span><strong id="overviewSceneCount">0</strong><button type="button" data-open-view="scenes" aria-label="Open scene board">↗</button></div>
+                            <div class="stat-line"><span>STORAGE</span><strong>THIS BROWSER</strong><i class="storage-dot"></i></div>
+                        </section>
+
+                        <section class="recent-work">
+                            <div class="panel-heading"><div><div class="micro-label">IN PROGRESS</div><h2>Recent scenes</h2></div><button class="text-button" type="button" data-open-view="scenes">View scene board <span aria-hidden="true">↗</span></button></div>
+                            <div id="recentScenes" class="recent-list"></div>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="view-page" id="charactersPage" data-page="characters" hidden>
+                    <div class="page-heading"><div><div class="micro-label">PROJECT CAST</div><h2>Characters with a point of view.</h2></div><button class="button button-primary" id="addCharacterButton" type="button"><span aria-hidden="true">+</span> Add character</button></div>
+                    <div class="character-layout">
+                        <div class="character-roster" id="characterRoster" aria-label="Character roster"></div>
+                        <section class="glass-panel character-editor">
+                            <div class="panel-heading"><div><div class="micro-label">CHARACTER PROFILE</div><h2 id="characterEditorTitle">Select a character</h2></div><span class="panel-index">CAST</span></div>
+                            <form id="characterForm" class="form-stack">
+                                <label>Name<input id="characterName" name="name" maxlength="48" required></label>
+                                <label>Role<input id="characterRole" name="role" maxlength="48" placeholder="Lead, sidekick, mentor"></label>
+                                <label>Character notes<textarea id="characterNotes" name="notes" rows="5" maxlength="420" placeholder="Personality, silhouette, signature details"></textarea></label>
+                                <div class="form-footer"><button class="text-button danger-button" id="deleteCharacterButton" type="button">Remove character</button><button class="button button-dark" type="submit">Save character</button></div>
+                            </form>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="view-page" id="scenesPage" data-page="scenes" hidden>
+                    <div class="page-heading"><div><div class="micro-label">SCENE DEVELOPMENT</div><h2>Turn a moment into a shot plan.</h2></div><span class="local-chip"><i></i> Drafts stay in this browser</span></div>
+                    <div class="scene-layout">
+                        <section class="glass-panel scene-composer">
+                            <div class="panel-heading"><div><div class="micro-label">NEW SCENE</div><h2>Scene brief</h2></div><span class="panel-index">01—05</span></div>
+                            <form id="sceneForm" class="form-stack">
+                                <label>Scene title<input id="sceneTitle" name="title" maxlength="80" required placeholder="The banana dance"></label>
+                                <label>Setting<input id="sceneSetting" name="setting" maxlength="100" placeholder="A sunlit jungle clearing"></label>
+                                <label>Who is in this scene<div class="character-picks" id="sceneCharacterPicks"></div></label>
+                                <label>What happens?<textarea id="sceneAction" name="action" rows="4" maxlength="500" required placeholder="Describe the action in your own words"></textarea></label>
+                                <div class="form-row">
+                                    <label>Mood<input id="sceneMood" name="mood" maxlength="48" placeholder="Playful, bright"></label>
+                                    <label>Frame<select id="sceneFrame" name="frame"><option>16:9 landscape</option><option>1:1 square</option><option>9:16 portrait</option></select></label>
+                                </div>
+                                <button class="button button-primary wide-button" type="submit">Build shot plan <span aria-hidden="true">↗</span></button>
+                            </form>
+                        </section>
+                        <section class="scene-output" id="sceneOutput" aria-live="polite">
+                            <div class="output-empty"><span class="empty-mark">A</span><div class="micro-label">SHOT PLAN</div><h3>Your next scene starts here.</h3><p>Write a scene brief to build a prompt and three shot beats.</p></div>
+                        </section>
+                    </div>
+                    <section class="scene-library"><div class="panel-heading"><div><div class="micro-label">PROJECT SCENES</div><h2>Scene board</h2></div><span class="panel-index" id="sceneBoardCount">0 DRAFTS</span></div><div class="scene-list" id="sceneList"></div></section>
+                </section>
+
+                <footer class="workspace-footer"><span>ANIMAITOR STUDIO BETA</span><span>PROJECT DATA SAVED LOCALLY</span></footer>
+            </main>
+        </div>
+    </div>
+
+    <dialog class="dialog-panel" id="projectDialog">
+        <form id="newProjectForm">
+            <div class="dialog-heading"><div><div class="micro-label">NEW WORKSPACE</div><h2>Start a project</h2></div><button class="icon-button" type="button" data-close-dialog aria-label="Close">×</button></div>
+            <label>Project name<input name="name" required maxlength="60" placeholder="A name worth remembering"></label>
+            <label>Format<input name="format" maxlength="48" placeholder="Short film, series, campaign"></label>
+            <label>First idea<textarea name="premise" rows="3" maxlength="420" placeholder="What are you making?"></textarea></label>
+            <button class="button button-primary wide-button" type="submit">Create project</button>
+        </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

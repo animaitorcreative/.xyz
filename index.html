@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Animaitor — Animate Anything.</title>
+
+    <meta
+        name="description"
+        content="Animaitor is a creative AI platform for turning ideas, characters, stories, assets and media into finished animated content."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="site-header">
+
+        <div class="nav-container">
+
+            <a href="#" class="brand" aria-label="Animaitor home">
+                <img src="assets/animaitor logo full.png" alt="Animaitor" class="brand-logo">
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="#platform">Platform</a>
+                <a href="#workflow">How It Works</a>
+                <a href="#projects">Projects</a>
+                <a href="studio.html">Studio Beta</a>
+                <a href="#vision">Vision</a>
+            </nav>
+
+            <a href="studio.html" class="nav-button">
+                Try Studio Beta
+            </a>
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open menu"
+                aria-controls="mobileMenu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#platform">Platform</a>
+            <a href="#workflow">How It Works</a>
+            <a href="#projects">Projects</a>
+            <a href="studio.html">Studio Beta</a>
+            <a href="#vision">Vision</a>
+            <a href="#contact">Get Early Access</a>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="hero-grid"></div>
+
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    THE CREATIVE AI PLATFORM
+                </div>
+
+                <h1>
+                    Animate
+                    <span>Anything.</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Animaitor is a creative platform for building,
+                    animating, and producing original worlds with AI.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="studio.html" class="button button-primary">
+                        Open Beta Studio
+                        <span>→</span>
+                    </a>
+
+                    <a href="#platform" class="button button-secondary">
+                        Explore the Platform
+                    </a>
+
+                </div>
+
+                <div class="hero-note">
+                    <span>●</span>
+                    Built for creators, studios, brands & storytellers
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="visual-window">
+
+                    <div class="window-header">
+
+                        <div class="window-dots">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="window-title">
+                            ANIMAITOR / PROJECT
+                        </div>
+
+                        <div class="window-status">
+                            ONLINE
+                        </div>
+
+                    </div>
+
+                    <div class="visual-body">
+
+                        <div class="visual-sidebar">
+
+                            <div class="sidebar-label">
+                                PROJECT
+                            </div>
+
+                            <div class="sidebar-item active">
+                                <span>◈</span>
+                                Overview
+                            </div>
+
+                            <div class="sidebar-item">
+                                <span>◇</span>
+                                Characters
+                            </div>
+
+                            <div class="sidebar-item">
+                                <span>◇</span>
+                                Locations
+                            </div>
+
+                            <div class="sidebar-item">
+                                <span>◇</span>
+                                Episodes
+                            </div>
+
+                            <div class="sidebar-item">
+                                <span>◇</span>
+                                Assets
+                            </div>
+
+                        </div>
+
+                        <div class="visual-main">
+
+                            <div class="fake-title">
+                                ZARA FOX
+                            </div>
+
+                            <div class="fake-subtitle">
+                                Character / Creative Profile
+                            </div>
+
+                            <div class="scene-preview">
+                                <img
+                                    class="scene-character"
+                                    src="assets/zara-fox.jpg"
+                                    alt="Zara Fox character portrait"
+                                    fetchpriority="high"
+                                >
+
+                                <div class="scene-label">
+                                    CHARACTER PROFILE
+                                </div>
+
+                            </div>
+
+                            <div class="generation-bar">
+
+                                <div>
+                                    <span>AI PIPELINE</span>
+                                    <strong>READY</strong>
+                                </div>
+
+                                <div class="progress">
+                                    <span></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-scroll">
+                SCROLL TO EXPLORE
+                <span>↓</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PLATFORM
+        ========================== -->
+
+        <section class="section platform" id="platform">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    01 / PLATFORM
+                </div>
+
+                <h2>
+                    The creative operating system
+                    <br>
+                    for <em>anything.</em>
+                </h2>
+
+                <p>
+                    Animaitor isn't just another AI image generator.
+                    It's a platform designed to manage the entire creative
+                    process—from the first idea to the finished project.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <article class="feature-card feature-large">
+
+                    <div class="feature-icon">✦</div>
+
+                    <h3>
+                        Build Worlds
+                    </h3>
+
+                    <p>
+                        Keep characters, locations, stories, assets,
+                        styles, episodes and continuity organized inside
+                        a living project.
+                    </p>
+
+                    <div class="feature-code">
+                        PROJECT / WORLD / CHARACTER / STORY
+                    </div>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">◎</div>
+
+                    <h3>
+                        Create
+                    </h3>
+
+                    <p>
+                        Connect the creative tools and AI models needed
+                        to turn concepts into production-ready assets.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">↗</div>
+
+                    <h3>
+                        Animate
+                    </h3>
+
+                    <p>
+                        Move from still images and assets into animation,
+                        video and finished sequences.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">⌘</div>
+
+                    <h3>
+                        Orchestrate
+                    </h3>
+
+                    <p>
+                        Let Animaitor coordinate the workflow instead of
+                        forcing creators to jump between disconnected tools.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card feature-large">
+
+                    <div class="feature-icon">∞</div>
+
+                    <h3>
+                        Your Projects. Your Data.
+                    </h3>
+
+                    <p>
+                        Animaitor is the platform. Your characters,
+                        worlds, brands, stories and assets remain your
+                        project data.
+                    </p>
+
+                    <div class="feature-code">
+                        PLATFORM ≠ PROJECT
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MANIFESTO
+        ========================== -->
+
+        <section class="manifesto">
+
+            <div class="manifesto-inner">
+
+                <div class="manifesto-label">
+                    THE IDEA
+                </div>
+
+                <blockquote>
+                    “What if the tools used to create
+                    <span>anything</span>
+                    could finally work together?”
+                </blockquote>
+
+                <p>
+                    That's Animaitor.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WORKFLOW
+        ========================== -->
+
+        <section class="section workflow" id="workflow">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    02 / WORKFLOW
+                </div>
+
+                <h2>
+                    From idea
+                    <br>
+                    to <em>reality.</em>
+                </h2>
+
+                <p>
+                    Animaitor turns a collection of disconnected creative
+                    tasks into a coherent production pipeline.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-line">
+
+                <div class="workflow-step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-icon">
+                        ✎
+                    </div>
+
+                    <h3>
+                        Imagine
+                    </h3>
+
+                    <p>
+                        Start with an idea, story, character,
+                        image, script or concept.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-connector"></div>
+
+
+                <div class="workflow-step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-icon">
+                        ◈
+                    </div>
+
+                    <h3>
+                        Build
+                    </h3>
+
+                    <p>
+                        Create the project structure, assets,
+                        characters and creative direction.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-connector"></div>
+
+
+                <div class="workflow-step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Generate
+                    </h3>
+
+                    <p>
+                        Connect AI models and creative tools
+                        to produce the pieces.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-connector"></div>
+
+
+                <div class="workflow-step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <div class="step-icon">
+                        ▶
+                    </div>
+
+                    <h3>
+                        Animate
+                    </h3>
+
+                    <p>
+                        Turn your assets into scenes,
+                        sequences and finished media.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-connector"></div>
+
+
+                <div class="workflow-step">
+
+                    <div class="step-number">
+                        05
+                    </div>
+
+                    <div class="step-icon">
+                        ↗
+                    </div>
+
+                    <h3>
+                        Publish
+                    </h3>
+
+                    <p>
+                        Take the finished work wherever
+                        your audience lives.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CASE STUDIES
+        ========================== -->
+
+        <section class="section projects" id="projects">
+
+            <div class="section-header project-header">
+
+                <div>
+
+                    <div class="section-number">
+                        03 / CASE STUDIES
+                    </div>
+
+                    <h2>
+                        Built on
+                        <br>
+                        <em>real projects.</em>
+                    </h2>
+
+                </div>
+
+                <p>
+                    Animaitor isn't being imagined in a vacuum.
+                    It's being built by solving real creative problems.
+                </p>
+
+            </div>
+
+
+            <div class="project-grid">
+
+
+                <!-- JINGLE JUNGLE -->
+
+                <article class="project-card jungle">
+
+                    <div class="project-background"></div>
+                    <img class="project-art" src="assets/demo/momo.png" alt="Momo from Jingle Jungle" loading="lazy">
+
+                    <div class="project-content">
+
+                        <div class="project-meta">
+                            CASE STUDY / 001
+                        </div>
+
+                        <h3>
+                            Jingle Jungle
+                        </h3>
+
+                        <p>
+                            An original animated children's property
+                            spanning characters, locations, stories,
+                            episodes, music, voices and animation.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>ANIMATION</span>
+                            <span>STORYTELLING</span>
+                            <span>MEDIA</span>
+                        </div>
+
+                    </div>
+
+                    <div class="project-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+                <!-- ZERO FOX -->
+
+                <article class="project-card zerofox">
+
+                    <div class="project-background"></div>
+
+                    <div class="project-content">
+
+                        <div class="project-meta">
+                            CASE STUDY / 002
+                        </div>
+
+                        <h3>
+                            Zero Fox Gibbon
+                        </h3>
+
+                        <p>
+                            A digital fashion personality and creative
+                            brand built around visual storytelling,
+                            collections and social content.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>FASHION</span>
+                            <span>DIGITAL</span>
+                            <span>BRAND</span>
+                        </div>
+
+                    </div>
+
+                    <div class="project-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ARCHITECTURE
+        ========================== -->
+
+        <section class="section architecture">
+
+            <div class="architecture-grid">
+
+                <div class="architecture-copy">
+
+                    <div class="section-number">
+                        04 / ARCHITECTURE
+                    </div>
+
+                    <h2>
+                        One platform.
+                        <br>
+                        <em>Many tools.</em>
+                    </h2>
+
+                    <p>
+                        Animaitor isn't locked to one model, one generator,
+                        or one provider.
+                    </p>
+
+                    <p>
+                        The platform can orchestrate the tools that make
+                        sense for the project—locally or in the cloud.
+                    </p>
+
+                    <div class="architecture-note">
+                        LOCAL-FIRST
+                        <span>+</span>
+                        PROVIDER-INDEPENDENT
+                    </div>
+
+                </div>
+
+
+                <div class="architecture-diagram">
+
+                    <div class="diagram-core">
+                        <span>ANIMAITOR</span>
+                        <small>CREATIVE ORCHESTRATION</small>
+                    </div>
+
+                    <div class="diagram-node node-one">
+                        <span>IMAGE</span>
+                        <small>GENERATION</small>
+                    </div>
+
+                    <div class="diagram-node node-two">
+                        <span>VIDEO</span>
+                        <small>GENERATION</small>
+                    </div>
+
+                    <div class="diagram-node node-three">
+                        <span>LLM</span>
+                        <small>REASONING</small>
+                    </div>
+
+                    <div class="diagram-node node-four">
+                        <span>AUDIO</span>
+                        <small>VOICE / MUSIC</small>
+                    </div>
+
+                    <div class="diagram-node node-five">
+                        <span>LOCAL</span>
+                        <small>COMPUTE</small>
+                    </div>
+
+                    <div class="diagram-line line-one"></div>
+                    <div class="diagram-line line-two"></div>
+                    <div class="diagram-line line-three"></div>
+                    <div class="diagram-line line-four"></div>
+                    <div class="diagram-line line-five"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VISION
+        ========================== -->
+
+        <section class="vision" id="vision">
+
+            <div class="vision-content">
+
+                <div class="section-number">
+                    05 / VISION
+                </div>
+
+                <h2>
+                    The future of
+                    <br>
+                    <em>creation</em> is programmable.
+                </h2>
+
+                <p>
+                    Today, creating something ambitious means stitching
+                    together dozens of applications, models, files and
+                    workflows.
+                </p>
+
+                <p>
+                    Animaitor's goal is simple:
+                </p>
+
+                <strong>
+                    Make the entire creative process feel like one system.
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="cta" id="contact">
+
+            <div class="cta-glow"></div>
+
+            <div class="cta-content">
+
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    EARLY DEVELOPMENT
+                </div>
+
+                <h2>
+                    Something is
+                    <span>coming to life.</span>
+                </h2>
+
+                <p>
+                    Animaitor is currently being built around real
+                    creative projects. Follow the journey.
+                </p>
+
+                <a
+                    href="mailto:hello@animaitor.xyz"
+                    class="button button-primary button-large"
+                >
+                    Contact Animaitor
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <img
+                    src="assets/logo.png"
+                    alt="Animaitor"
+                >
+
+                <p>
+                    Animate Anything.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+                    <span>EXPLORE</span>
+                    <a href="#platform">Platform</a>
+                    <a href="#workflow">How It Works</a>
+                    <a href="#projects">Projects</a>
+                </div>
+
+                <div>
+                    <span>CONNECT</span>
+                    <a href="#contact">Contact</a>
+                    <a href="#">X / Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Animaitor
+            </span>
+
+            <span>
+                BUILT FOR CREATORS
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
